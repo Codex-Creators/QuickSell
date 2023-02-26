@@ -1,0 +1,29 @@
+Como adicionar constraints nas FK do Sequelize?
+
+Por que QTD_ESTOQUE em TAB_PRODUTO é DECIMAL(15,5)?
+
+O que é VAL_ADMIN?
+
+Tem uma redundância de dados. Existem duas colunas que está presente tanto na tabela TAB_PRODUTO quanto em TAB_ITEM_ENTRADA, que é VAL_PRECO_CUSTO.
+
+As tabelas tem que receber nomeação no plural.
+
+Por que tem um atributo MARGEM_LUCRO na entidade PRODUTO? Suponho que tenha pensado que é para calcular quanto de lucro foi obtido por produto, certo? Porém, o lucro é obtido através de (PRECO_VENDA - PRECO_CUSTO), que já são atributos da própria tabela, o que tornaria MARGEM_LUCRO como atributo opcional. Seria melhor até mesmo tirar ele de lá e obte-lô pelo cálculo.
+
+O atributo QUANTIDADEnão é opcional para cada produto na entidade PRODUTO.
+
+A coluna DES_OBSERVACAO não corresponde ao atributo DESCRIÇÃO do modelo conceitual da entidade PRODUTO. Um nome melhor seria DES_PRODUTO, equivalente a "descrição do produto".
+
+Outro ponto que comprova a mudança de nome de DES_OBSERVACAO, é que não tem uma coluna em TAB_PRODUTO que corresponda ao atributo VALIDADE da mesma entidade. O que faz entender que DES_OBSERVACAO é tanto DESCRICAO quanto VALIDADE.
+
+No modelo conceitual, a nomeação do relacionamento entre CLIENTE e PRODUTO está errada. Não COMPRA, mas POSSUI.
+
+Para um CLIENTE se tornar CLIENTE, é preciso que haja pelo menos uma venda. Portanto, no relacionamento entre VENDA e CLIENTE, um CLIENTE tem um ou muitas VENDAS.
+
+A nomeação do relacionamento N:M entre TAB_PRODUTO e TAB_VENDA, tem que receber nomeação TAB_PRODUTO_VENDA e não TAB_ITEM_VENDA.
+
+A forma descrita no modelo conceitual sobre a agregação está incorreta. As tabelas TAB_PRODUTO e TAB_FORNECEDOR tem que estar dentro da agregação, e não apenas o relacionamento.
+
+O que é NUM_CONTATO em TAB_FORNECEDOR? Seria o número de contato do fornecedor, mas que tipo de número? Se é telefone tem que ser NUM_TELEFONE
+
+Não precisa colocar VAL_PRECO_CUSTO, VAL_MARGEM_LUCRO, VAL_PRECO_VENDA. Apenas VAL_CUSTO, VAL_VENDA, VAL_LUCRO.

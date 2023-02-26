@@ -1,5 +1,5 @@
 import express from 'express';
-import { connectionToMySQL } from './database/database_configuration.js';
+import { connectionToMySQL } from './database/databaseConfiguration.js';
 
 export const routes = express.Router();
 
