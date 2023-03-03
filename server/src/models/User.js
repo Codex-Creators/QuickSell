@@ -5,26 +5,31 @@ export default class User extends Model { }
 
 User.init(
     {
-        cod_usuario: {
+        COD_USUARIO: {
             type: DataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
 
-        des_email: {
+        DES_EMAIL: {
             type: DataTypes.STRING(45),
             allowNull: false,
         },
 
-        des_senha: {
+        DES_SENHA: {
             type: DataTypes.STRING(45),
             allowNull: false,
+        },
+
+        SIT_USUARIO: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: '0',
         }
     },
-
     {
         sequelize: connection,
-        modelName: 'tab_usuario',
+        modelName: 'TAB_USUARIOS',
         freezeTableName: true,
         timestamps: false,
     }
