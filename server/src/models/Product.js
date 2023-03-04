@@ -20,10 +20,6 @@ Product.init(
             type: DataTypes.STRING(3),
             allowNull: false,
         },
-        VAL_MARGEM_LUCRO: {
-            type: DataTypes.DECIMAL(15, 2),
-            allowNull: false,
-        },
         VAL_PRECO: {
             type: DataTypes.DECIMAL(15,5),
             allowNull: false,

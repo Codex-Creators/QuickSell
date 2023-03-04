@@ -1,7 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../database/database.js';
 import Provider from './Provider.js';
-import Product from './Product.js';
 
 export default class Purchase extends Model { }
 

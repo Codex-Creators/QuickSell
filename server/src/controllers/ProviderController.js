@@ -7,6 +7,7 @@ export default {
         let { cnpjNumber, fantasyName, realName, contactNumber } = req.body;
         try {
             await Provider.create({ NUM_CNPJ_FORNECEDOR: cnpjNumber, NOM_FANTASIA: fantasyName, NOM_RAZAO_SOCIAL: realName, NUM_TELEFONE: contactNumber });
+            res.send('Cadastrado com sucesso!');
         } catch (error) {
             console.log(error);
         }
@@ -40,6 +41,7 @@ export default {
                     where: { NUM_CNPJ_FORNECEDOR: cnpjNumber }
                 }
             );
+            console.log('Editado com sucesso!');
         } catch (error) {
             console.log(error);
         }
@@ -50,6 +52,7 @@ export default {
 
         try {
             await Provider.destroy({ where: { NUM_CNPJ_FORNECEDOR: cnpj } });
+            console.log('Deletado com sucesso!');
         } catch (error) {
             console.log(error);
         }

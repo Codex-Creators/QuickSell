@@ -35,6 +35,7 @@ PurchaseItem.init(
         VAL_DESCONTO: {
             type: DataTypes.DECIMAL(15, 2),
             allowNull: false,
+            defaultValue: 0,
         }
     },
     {
