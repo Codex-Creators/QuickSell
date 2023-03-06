@@ -22,13 +22,8 @@ export default {
         let { email, password } = req.body;
         let existentUser = await User.findOne({ where: { DES_EMAIL: email } });
         if (!existentUser) return res.send('Usuário não encontrado!');
-
         let isValidPassword = await bcrypt.compare(password, existentUser.DES_SENHA);
-
         if (isValidPassword) return res.send('Login realizado');
         res.send('Acesso negado!');
-
-
-
     }
 }

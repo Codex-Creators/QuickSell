@@ -46,5 +46,5 @@ PurchaseItem.init(
     }
 );
 
-Purchase.belongsToMany(Product, {through: PurchaseItem});
-Product.belongsToMany(Purchase, {through: PurchaseItem});
+Purchase.belongsToMany(Product, { through: PurchaseItem });
+Product.belongsToMany(Purchase, { through: PurchaseItem });

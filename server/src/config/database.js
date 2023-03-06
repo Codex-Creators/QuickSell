@@ -1,9 +1,9 @@
 export default {
     dialect: 'mysql',
-    host: 'localhost',
+    host: 'sql.freedb.tech',
     port: '3306',
-    username: 'root',
-    password: '12345',
-    database: 'db_quick_sell_project',
+    username: 'freedb_codexcreatorsqs@gmail.com',
+    password: 'd8A8%mmsUs8u4*N',
+    database: 'freedb_db_quick_sell_project',
     query: { raw: true }
 }
