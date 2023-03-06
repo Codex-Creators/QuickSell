@@ -17,7 +17,7 @@ User.init(
         },
 
         DES_SENHA: {
-            type: DataTypes.STRING(45),
+            type: DataTypes.TEXT(400),
             allowNull: false,
         },
 

@@ -1,9 +1,11 @@
 import express from 'express';
 import ClientController from './controllers/ClientController.js';
+import PaymentMethodController from './controllers/PaymentMethodController.js';
 import ProductCategoryController from './controllers/ProductCategoryController.js';
 import ProductController from './controllers/ProductController.js';
 import ProviderController from './controllers/ProviderController.js';
 import PurchaseController from './controllers/PurchaseController.js';
+import UserController from './controllers/UserController.js';
 export const routes = express.Router();
 
 
@@ -31,3 +33,12 @@ routes.post('/clients', ClientController.addClient);
 routes.get('/clients', ClientController.showClients);
 routes.put('/clients/:id', ClientController.updateClient);
 routes.delete('/clients/:id', ClientController.deleteClient);
+
+
+routes.post('/paymentMethods', PaymentMethodController.addPaymentMethod);
+routes.get('/paymentMethods', PaymentMethodController.showPaymentMethods);
+routes.put('/paymentMethods/:id', PaymentMethodController.updatePaymentMethod);
+routes.delete('/paymentMethods/:id', PaymentMethodController.deletePaymentMethod);
+
+routes.post('/users', UserController.addUser);
+routes.post('/login', UserController.login);
