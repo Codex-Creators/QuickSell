@@ -40,7 +40,7 @@ PurchaseItem.init(
     },
     {
         sequelize: connection,
-        modelName: 'TAB_CATEGORIAS',
+        modelName: 'tab_categorias',
         freezeTableName: true,
         timestamps: false,
     }

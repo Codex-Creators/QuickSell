@@ -1,5 +1,6 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../database/database.js';
+import Sell from './Sell.js';
 
 export default class Client extends Model { }
 
@@ -27,3 +28,5 @@ Client.init(
         timestamps: false,
     }
 );
+
+Client.hasMany(Sell, {foreignKey: 'COD_CLIENTE', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'});

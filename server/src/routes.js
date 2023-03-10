@@ -5,6 +5,7 @@ import ProductCategoryController from './controllers/ProductCategoryController.j
 import ProductController from './controllers/ProductController.js';
 import ProviderController from './controllers/ProviderController.js';
 import PurchaseController from './controllers/PurchaseController.js';
+import SellController from './controllers/SellController.js';
 import UserController from './controllers/UserController.js';
 export const routes = express.Router();
 
@@ -42,3 +43,6 @@ routes.delete('/paymentMethods/:id', PaymentMethodController.deletePaymentMethod
 
 routes.post('/users', UserController.addUser);
 routes.post('/login', UserController.login);
+routes.get('/users', UserController.showUsers);
+
+routes.post('/sells', SellController.addSell);

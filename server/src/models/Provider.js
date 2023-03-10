@@ -25,7 +25,7 @@ Provider.init(
     },
     {
         sequelize: connection,
-        modelName: 'TAB_FORNECEDORES',
+        modelName: 'tab_fornecedores',
         timestamps: false,
         freezeTableName: true,
     }

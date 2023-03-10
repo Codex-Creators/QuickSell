@@ -1,6 +1,7 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../database/database.js';
-
+import '../models/Sell.js'
+import Sell from './Sell.js';
 export default class PaymentMethod extends Model { }
 
 PaymentMethod.init(
@@ -22,3 +23,6 @@ PaymentMethod.init(
         timestamps: false,
     }
 );
+
+
+PaymentMethod.hasMany(Sell, {foreignKey: 'COD_FORMA_PAGAMENTO', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'});

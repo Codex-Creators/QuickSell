@@ -25,5 +25,14 @@ export default {
         let isValidPassword = await bcrypt.compare(password, existentUser.DES_SENHA);
         if (isValidPassword) return res.send('Login realizado');
         res.send('Acesso negado!');
+    },
+
+    async showUsers(req, res) {
+        try {
+            let users = await User.findAll();
+            res.send(users);
+        } catch(error) {
+            console.log(error);
+        }
     }
 }

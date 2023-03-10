@@ -40,7 +40,7 @@ Product.init(
     },
     {
         sequelize: connection,
-        modelName: 'TAB_PRODUTOS',
+        modelName: 'tab_produtos',
         freezeTableName: true,
         timestamps: false,
     }

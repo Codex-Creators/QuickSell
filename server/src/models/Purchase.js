@@ -33,7 +33,7 @@ Purchase.init(
     },
     {
         sequelize: connection,
-        modelName: 'TAB_COMPRAS',
+        modelName: 'tab_compras',
         freezeTableName: true,
         timestamps: false,
     }

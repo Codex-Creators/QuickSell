@@ -36,7 +36,7 @@ SellItem.init(
     {
         sequelize: connection,
         timestamps: false,
-        modelName: 'TAB_PRODUTOS_VENDAS',
+        modelName: 'tab_produtos_vendas',
         freezeModelName: true
     }
 );
