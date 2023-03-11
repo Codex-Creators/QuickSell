@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    height: inherit;
+    overflow: hidden;
+}
+
+.App {
+    display: flex;
+}
+
+.col-sm-2 {
+    padding-left: 0;
+}
+
+.for-table {
+    width: 100%;
+    overflow: scroll;
+    max-height: 77vh;
+}
+
+.edit {
+    color: #ffa500;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.delete {
+    color: #ff0000;
+    cursor: pointer;
+}
