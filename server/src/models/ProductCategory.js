@@ -23,6 +23,3 @@ ProductCategory.init(
         timestamps: false,
     }
 );
-
-ProductCategory.hasMany(Product, {foreignKey: 'COD_CATEGORIA', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'});
-Product.belongsTo(ProductCategory, {foreignKey: 'COD_CATEGORIA', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'})

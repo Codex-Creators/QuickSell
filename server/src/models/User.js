@@ -1,6 +1,5 @@
 import { Model, DataTypes } from "sequelize";
 import connection from "../database/database.js";
-import Sell from "./Sell.js";
 
 export default class User extends Model { }
 
@@ -35,5 +34,3 @@ User.init(
         timestamps: false,
     }
 );
-
-User.hasMany(Sell, {foreignKey: 'COD_USUARIO', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'});

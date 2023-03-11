@@ -38,6 +38,3 @@ Purchase.init(
         timestamps: false,
     }
 );
-
-Purchase.belongsTo(Provider, {foreignKey: 'NUM_CNPJ_FORNECEDOR', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'});
-Provider.hasMany(Purchase, {foreignKey: 'NUM_CNPJ_FORNECEDOR', onDelete: 'RESTRICT', onUpdate: 'RESTRICT'});

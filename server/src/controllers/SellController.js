@@ -12,7 +12,6 @@ export default {
             user
         } = req.body;
 
-
         try {
             await Sell.create(
                 {

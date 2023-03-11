@@ -1,7 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../database/database.js';
-import Product from './Product.js';
-import Purchase from './Purchase.js';
 
 export default class PurchaseItem extends Model { }
 
@@ -45,6 +43,3 @@ PurchaseItem.init(
         timestamps: false,
     }
 );
-
-Purchase.belongsToMany(Product, { through: PurchaseItem });
-Product.belongsToMany(Purchase, { through: PurchaseItem });

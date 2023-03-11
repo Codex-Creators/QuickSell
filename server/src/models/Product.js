@@ -1,6 +1,5 @@
 import { Model, DataTypes } from 'sequelize';
 import connection from '../database/database.js';
-import ProductCategory from './ProductCategory.js';
 import './ProductCategory.js';
 
 export default class Product extends Model { }

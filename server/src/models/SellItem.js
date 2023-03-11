@@ -24,6 +24,10 @@ SellItem.init(
             onDelete: 'RESTRICT',
             onUpdate: 'RESTRICT'
         },
+        VAL_PRECO: {
+            type: DataTypes.DECIMAL(15,5),
+            allowNull: false
+        },
         QTD_PRODUTO: {
             type: DataTypes.DECIMAL(15, 5),
             allowNull: false
